@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Tarea #3 del curso de Desarrollo de Aplicaciones Web - Proyecto HTML5">
+    <meta name="author" content="VillegasAdrian">
+    <title>Tarea #3 | Proyecto HTML5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="brand">
+            <img src="assets/images/logo.png" alt="Logo" class="site-logo">
+            <h1>Tarea #3 | Proyecto HTML5</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#contenido">Contenido</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="inicio">
+
+        <section>
+            <h2>Introducción</h2>
+            <p>
+                Este sitio web fue desarrollado utilizando <strong>HTML5</strong> y 
+                <em>CSS</em>, aplicando etiquetas semánticas para lograr una estructura
+                clara, ordenada y profesional del contenido.
+            </p>
+        </section>
+        <section id="contenido">
+
+            <article>
+                <h3><strong>Contenido Multimedia</strong></h3>
+                <p>Imagen cargada de forma local, de la carpeta de assets/images:</p>
+
+                <img class="centered-media img-animated" src="assets/images/prueba%231.png" alt="Imagen representativa del proyecto">
+
+                <p>Video cargado de forma local, de la carpeta de assets/videos:</p>
+                <div class="local-video-wrapper" style="display:block;">
+                    <video id="localVideo" class="centered-media local-video" controls muted autoplay playsinline>
+                        <source src="assets/videos/videoplayback.mp4" type="video/mp4">
+                        Reproductor no soportado.
+                    </video>
+                </div>
+            </article>
+
+            <article>
+                <h3>Listas en HTML</h3>
+
+                <h4>Lista Ordenada</h4>
+                <ol>
+                    <li>HTML5</li>
+                    <li>CSS</li>
+                    <li>GitHub</li>
+                </ol>
+
+                <h4>Lista Desordenada</h4>
+                <ul>
+                    <li>Etiquetas semánticas</li>
+                    <li>Multimedia</li>
+                    <li>Formularios</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Tabla de Lenguajes Web</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lenguaje</th>
+                            <th>Función</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML</td>
+                            <td>Estructura del sitio</td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                            <td>Diseño y estilos</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>Interactividad</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article>
+                <h3>Enlace Externo</h3>
+                <p>
+                    Plataforma utilizada para alojar el proyecto:
+                    <a href="https://github.com" target="_blank">GitHub</a>
+                </p>
+            </article>
+
+        </section>
+
+        <section id="contacto">
+            <h2>Formulario de Contacto</h2>
+
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" required>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Tarea #3 | HTML5</p>
+    </footer>
+
+</body>
+</html>

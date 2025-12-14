@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(180deg, #6299e2 0%, #f7b6f1 100%);
+}
+/* HEADER */
+header {
+    background-color: #0f172a;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 28vh;
+}
+
+/* Brand: logo + title */
+/* Brand block: logo always above the title (stacked) */
+.brand {
+    display: flex;
+    flex-direction: column; /* logo on top */
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.site-logo {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0);
+    padding: 6px;
+    box-shadow: 0 6px 18px rgba(2,6,23,0.12);
+}
+
+@media (max-width: 520px) {
+    .brand { flex-direction: column; gap: 8px; }
+    .site-logo { width: 48px; }
+    h1 { font-size: 1.6rem; }
+}
+/* Keep stacked layout on all viewports as requested (logo above title) */
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.menu a {
+    color: rgb(86, 128, 245);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* MAIN */
+main {
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #020617;
+}
+
+/* Título principal centrado y contrastado */
+h1 {
+    margin: 0 0 10px 0;
+    color: #da48ff;
+    font-size: 2.2rem;
+}
+
+img {
+    max-width: 100%;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+/* Centrar imágenes y el iframe embebido */
+.centered-media {
+    display: block;
+    margin: 10px auto;
+}
+
+/* Contenedor para video local: ancho máximo para layout */
+.local-video-wrapper { max-width: 640px; margin: 10px auto; }
+.local-video { width: 100%; height: auto; border-radius: 6px; display: block; }
+
+/* Botón eliminado: no quedan estilos JS relacionados */
+
+/* Animación de entrada: hace fade + desplazamiento hacia arriba */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.img-animated { opacity: 0; animation: fadeInUp 0.8s ease forwards; }
+
+/* TABLE */
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #475569;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #0033ff;
+}
+
+/* FORM */
+form {
+    background-color: rgb(194, 216, 133);
+    padding: 15px;
+    width: 300px;
+    border-radius: 8px;
+}
+
+input, button {
+    width: 100%;
+    margin-top: 8px;
+    padding: 6px;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* FOOTER */
+footer {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Centrar la sección de contacto y su formulario */
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra h2 y el form horizontalmente */
+    justify-content: center;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+#contacto form {
+    margin: 0; /* quitar margen vertical para que el form quede centrado dentro del section */
+}
