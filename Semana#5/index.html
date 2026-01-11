@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería Interactiva</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>🖼️ Galería Interactiva 🖼️</h1>
+    <p>Agrega imágenes por URL o desde tu PC, selecciónalas y elimínalas (DOM + eventos).</p>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <label for="imageUrl" class="label">URL de la imagen</label>
+
+      <div class="row">
+        <input
+          id="imageUrl"
+          type="url"
+          placeholder="https://ejemplo.com/imagen.jpg"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button id="addBtn" class="btn primary" type="button">
+          ➕ Agregar Imagen
+        </button>
+      </div>
+
+      <div class="row">
+        <button id="deleteBtn" class="btn danger" type="button" disabled>
+          🗑️ Eliminar Imagen Seleccionada
+        </button>
+
+        <button id="clearInputBtn" class="btn" type="button" title="Limpiar el campo">
+          🧹 Limpiar
+        </button>
+      </div>
+
+      <!-- CARGA LOCAL -->
+      <div class="row">
+        <input id="fileInput" type="file" accept="image/*" hidden />
+        <button id="uploadBtn" class="btn" type="button">
+          📂 Cargar imagen local
+        </button>
+      </div>
+
+      <div class="help">
+        <strong>Atajos de teclado:</strong>
+        <ul>
+          <li><kbd>Enter</kbd> → Agregar imagen (cuando estás en el input)</li>
+          <li><kbd>Delete</kbd> / <kbd>Backspace</kbd> → Eliminar seleccionada</li>
+          <li><kbd>Esc</kbd> → Deseleccionar</li>
+          <li><kbd>Ctrl</kbd> + <kbd>O</kbd> → Cargar imagen local</li>
+        </ul>
+      </div>
+
+      <p id="status" class="status" aria-live="polite"></p>
+    </section>
+
+    <section class="gallerySection">
+      <div class="galleryHeader">
+        <h2>Galería</h2>
+        <span id="count" class="count">0 imágenes</span>
+      </div>
+
+      <div id="gallery" class="gallery" aria-label="Galería de imágenes"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Usando JavaScript (DOM + eventos) • Semana 5</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
