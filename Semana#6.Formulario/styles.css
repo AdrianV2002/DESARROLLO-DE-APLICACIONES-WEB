@@ -1,0 +1,192 @@
+:root{
+  --bg: #0b1020;
+  --text: #e8ecff;
+  --muted: #a8b0d8;
+
+  --border: rgba(255,255,255,0.14);
+  --focus: rgba(120,170,255,0.45);
+
+  --ok: #22c55e;
+  --bad: #ef4444;
+
+  --btn: #4f46e5;
+  --btnHover: #4338ca;
+  --btnDisabled: rgba(79, 70, 229, 0.35);
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(900px 500px at 30% 10%, rgba(79,70,229,0.3), transparent),
+              radial-gradient(900px 500px at 70% 10%, rgba(197, 34, 34, 0.18), transparent),
+              var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.container{
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card{
+  width: min(720px, 100%);
+  background: rgba(18, 26, 51, 0.92);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+}
+
+.header h1{
+  margin: 0 0 6px;
+  font-size: 1.5rem;
+}
+
+.header p{
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.field{
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+label{
+  font-weight: 700;
+}
+
+.control{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+input{
+  width: 100%;
+  padding: 12px 44px 12px 12px; /* espacio para iconos a la derecha */
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+  outline: none;
+}
+
+input:focus{
+  border-color: rgba(120,170,255,0.7);
+  box-shadow: 0 0 0 4px var(--focus);
+}
+
+/* Botón de mostrar/ocultar contraseña */
+.icon-btn{
+  position: absolute;
+  right: 40px;
+  background: transparent;
+  border: 0;
+  padding: 6px;
+  cursor: pointer;
+  color: rgba(255,255,255,0.8);
+  border-radius: 10px;
+}
+
+.icon-btn:hover{
+  background: rgba(255,255,255,0.08);
+}
+
+.status-icon{
+  position: absolute;
+  right: 12px;
+  font-size: 1.05rem;
+  opacity: 0; /* se activa cuando se valida */
+}
+
+/* Estados de validación */
+input.valid{
+  border-color: rgba(34,197,94,0.95);
+  box-shadow: 0 0 0 3px rgba(34,197,94,0.18);
+}
+input.invalid{
+  border-color: rgba(239,68,68,0.95);
+  box-shadow: 0 0 0 3px rgba(239,68,68,0.18);
+}
+
+.status-icon.valid{
+  color: var(--ok);
+  opacity: 1;
+}
+.status-icon.invalid{
+  color: var(--bad);
+  opacity: 1;
+}
+
+.hint{
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: -2px;
+}
+
+.error{
+  color: var(--bad);
+  font-size: 0.9rem;
+  min-height: 18px;
+}
+
+.actions{
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+button{
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 14px;
+  cursor: pointer;
+  font-weight: 800;
+  color: white;
+  background: var(--btn);
+  transition: transform .05s ease, background .2s ease, opacity .2s ease;
+  flex: 1;
+}
+
+button:hover{ background: var(--btnHover); }
+button:active{ transform: translateY(1px); }
+
+button:disabled{
+  cursor: not-allowed;
+  background: var(--btnDisabled);
+  opacity: 0.95;
+}
+
+button.secondary{
+  background: rgba(255,255,255,0.12);
+  border: 1px solid var(--border);
+}
+button.secondary:hover{
+  background: rgba(255,255,255,0.18);
+}
+
+.note{
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.success{
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(34,197,94,0.55);
+  background: rgba(227, 227, 228, 0.12);
+  color: #c9ffd9;
+}
+
+.hidden{ display: none; }
