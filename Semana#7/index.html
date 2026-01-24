@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista Dinámica de Productos</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<main class="container">
+  <section class="card">
+    <header class="header">
+      <h1>Lista Dinámica de Productos</h1>
+      <p>Los productos se generan automáticamente al cargar la página.</p>
+    </header>
+
+    <div class="toolbar">
+      <button id="addBtn">
+        <i class="bi bi-plus-circle"></i>
+        Agregar producto
+      </button>
+    </div>
+
+    <ul id="productList" class="product-list"></ul>
+
+    <p class="note">Actividad de renderización dinámica usando JavaScript.</p>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
