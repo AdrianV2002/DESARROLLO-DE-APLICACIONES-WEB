@@ -1,0 +1,82 @@
+:root {
+    --bg-dark: #0a0e1a;
+    --glass: rgba(255, 255, 255, 0.05);
+    --border: rgba(255, 255, 255, 0.1);
+    --accent: #00d2ff;
+}
+
+body {
+    background: radial-gradient(circle at top right, #1a2a4a, #0a0e1a);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* NAVBAR PERSONALIZADA */
+.navbar {
+    background: rgba(10, 14, 26, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+}
+
+/* PANEL GLASSMORPHISM*/
+.panel {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(144, 174, 255, 0.5);
+}
+
+/* CARRUSEL AJUSTE */
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/* BOTONES */
+.btn-custom-lg {
+    background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.btn-custom-lg:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
+}
+
+.btn-primary-gradient {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    border: none;
+    color: white;
+}
+
+/* FORMULARIOS */
+.form-control {
+    background: rgb(255, 255, 255);
+    border: 1px solid var(--border);
+    color: white !important;
+}
+
+.form-control:focus {
+    background: rgba(255, 0, 0, 0);
+    border-color: var(--accent);
+    box-shadow: none;
+}
+
+/* FOOTER */
+.footer-custom {
+    border-top: 1px solid var(--border);
+    background: rgba(0,0,0,0.3);
+}
